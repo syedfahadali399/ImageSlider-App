@@ -60,14 +60,20 @@ document.getElementById("previous").addEventListener("click", function() {
 })
 
 document.getElementById("auto").addEventListener("click", function() {
-    setInterval(() => {
+    let change = setInterval(() => {
         imageSliderIncrease()
         setTimeout(() => {
             showImage.classList.remove("active")
         }, 1000) 
     },3000)
+    document.getElementById("reset").addEventListener("click", function() {
+        clearInterval(change)
+        firstImage()
+        currIndex = 0
+    })
 })
 
 document.getElementById("reset").addEventListener("click", function() {
     firstImage()
+    currIndex = 0
 })

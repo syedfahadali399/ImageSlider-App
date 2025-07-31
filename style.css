@@ -1,0 +1,97 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #725AC1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725AC1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725AC1;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.imagedesign {
+  width: 500px;
+  height: 300px;
+  border-radius: 16px;
+}
+
+.para {
+  font-size: 44px;
+  font-weight: 800;
+  text-decoration: underline;
+  color: cornflowerblue;
+  margin-top: 32px;
+}
+
+.active {
+  animation: popup 1s 0.1ms ease-in forwards;
+  transition: all 0.2s;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0.5)    } 
+  100% {
+    transform: scale(1)
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .imagedesign{
+    width: 400px;
+    height: 250px;
+  }
+  .btn-group {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  .para {
+    font-size: 34px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .imagedesign {
+    width: 260px;
+    height: 180px;
+  }
+  .para {
+    font-size: 26px;
+  }
+}
